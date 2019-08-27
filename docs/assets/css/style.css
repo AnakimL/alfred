@@ -9327,7 +9327,7 @@ mark,
 
 .pageFour__info {
     margin: 70px 0;
-    height: 100px;
+    min-height: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -9383,12 +9383,17 @@ mark,
 }
 
 @media screen and (max-width: 1200px) {
+    .pg-wrapper.pg-vertical {
+        width: 100% !important;
+    }
+
     #navicon {
         display: block;
         margin: 0 auto;
     }
 
     .header {
+        width: 100% !important;
         z-index: 1001;
         min-height: 92px;
     }
@@ -9431,9 +9436,28 @@ mark,
         left: 0;
         z-index: 1001;
     }
+
+    .header__adr {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+        align-items: center !important;
+    }
+
+    .pageThree-text {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 900px) {
+    .pageOne__top {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .pageOne__promo {
         display: none;
     }
@@ -9443,6 +9467,7 @@ mark,
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
+        width: 100%;
     }
 
     .pageOne__bottom {
@@ -9461,6 +9486,22 @@ mark,
 
     .pageOne .slick-slide .item img {
         margin: 0 auto;
+    }
+
+    .pageFour__info {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .pageFour__item {
+        width: 47%;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .pageOne__top {
+        max-height: 330px;
     }
 }
 
@@ -9489,6 +9530,19 @@ mark,
 
     .pageTwo-item {
         width: 100%;
+    }
+
+    .header--mobile .header__adr {
+        width: 66%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .pageFour__item {
+        width: 100%;
+        border-left: none;
+        border-bottom: 2px solid black;
+        margin-bottom: 20px;
     }
 }
 
@@ -9522,4 +9576,8 @@ mark,
 
 .pageOne .slick-next:before {
     font-size: 40px;
+}
+
+.pageOne .slick-slide .item img {
+    width: 100%;
 }
