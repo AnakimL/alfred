@@ -8932,6 +8932,8 @@ mark,
     background: rgba(0, 0, 0, 0.92);
     left: 0;
     height: 100%;
+    top: 0;
+    z-index: 8;
 }
 
 .header--mobile nav ul.active li {
@@ -8978,6 +8980,7 @@ mark,
 .header--mobile #navicon.active {
     display: block;
     position: relative;
+    z-index: 9;
 }
 
 .header--mobile #navicon.active .bar {
@@ -9096,6 +9099,10 @@ mark,
     text-shadow: 0 -1px 2px #000;
 }
 
+.header__adr a.mobile {
+    display: none;
+}
+
 .header__adr p {
     margin-bottom: 10px;
     font-weight: 500;
@@ -9117,6 +9124,10 @@ mark,
     padding: 5px 10px;
     border-radius: 20px;
     text-shadow: 0px -1px 2px black;
+}
+
+.header__logo--mobile {
+    display: none;
 }
 
 .pg-vertical {
@@ -9164,6 +9175,14 @@ mark,
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
     text-align: center;
+}
+
+.pageOne__offer-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+    height: 300px;
 }
 
 .nav__dark {
@@ -9510,6 +9529,18 @@ mark,
         display: none;
     }
 
+    .header__adr a {
+        display: none;
+    }
+
+    .header__adr a.mobile {
+        display: block;
+        color: #ffffff;
+        background: none;
+        font-size: 30px;
+        margin-right: auto;
+    }
+
     .header nav {
         width: 50%;
     }
@@ -9533,7 +9564,30 @@ mark,
     }
 
     .header--mobile .header__adr {
-        width: 66%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 90%;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+    }
+
+    .header--mobile .header__adr--mobile {
+        display: none !important;
+    }
+
+    .header--mobile .header__logo--mobile {
+        display: block !important;
+        background: #ffffff;
+        border-radius: 20px;
+        margin-right: auto;
+    }
+
+    .header--mobile .pageOne__nav {
+        width: 45px;
+        margin: 0 10px 0 0;
     }
 }
 
@@ -9580,4 +9634,21 @@ mark,
 
 .pageOne .slick-slide .item img {
     width: 100%;
+    height: 100%;
+}
+
+.pageOne .slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.pageOne .slick-list {
+    height: 100%;
+}
+
+.pageOne .slick-track {
+    height: 100%;
+}
+
+.pageOne .slick-slide div {
+    height: 100%;
 }

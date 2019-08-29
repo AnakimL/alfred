@@ -24,6 +24,19 @@ $(document).ready(function () {
         slidesToShow: 1
     });
 
+    $('.pageOne__offer-slider').slick({
+        arrows: false,
+        dots: true,
+        infinite: true,
+        slidesToScroll: 1,
+        variableWidth: true,
+        mobileFirst: true,
+        responsive: [{
+            breakpoint: 992,
+            settings: 'unslick'
+        }]
+    });
+
     $("#navicon").click(function () {
         $(this).toggleClass('active');
         $('.pageOne__nav ul').toggleClass('active');
