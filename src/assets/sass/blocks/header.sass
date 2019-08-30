@@ -1,3 +1,11 @@
+//#map
+//  height: 100%
+//  width: 100%
+
+#mapBig
+  display: none
+
+
 .header
   font-family: 'Anonymous Pro', monospace
   display: flex
@@ -12,6 +20,8 @@
   z-index: 20
   &--mobile
     padding: 3px 0
+    background: none
+    background-color: rgba(0, 0, 0, 0.5)
     nav ul
       display: none !important
       &.active
@@ -174,6 +184,7 @@
     display: flex
     max-width: 1300px
     margin: 30px auto 0
+    width: 100%
   &__offer
     flex: 0 0 33.33333%
     max-width: 33.33333%
@@ -406,6 +417,9 @@
 
 
 @media screen and ( max-width: 1200px)
+  .lap-hide
+    display: block
+
   .pg-wrapper.pg-vertical
     width: 100% !important
   #navicon
@@ -461,6 +475,8 @@
 
 
 @media screen and ( max-width: 900px)
+  .pageThree-text
+    font-size: 16px
   .pageOne
     &__top
       width: 100%
@@ -480,6 +496,8 @@
       .item
         img
           margin: 0 auto
+    .slick-slide img
+      margin: 0 auto
 
   .pageFour__info
     flex-wrap: wrap
@@ -492,6 +510,14 @@
     max-height: 330px
 
 @media screen and (max-width: 600px)
+  .pageFooter-slider
+    display: none !important
+  #map
+    display: none
+
+  #mapBig
+    display: block
+
   .header__adr
     display: none
     a

@@ -1,0 +1,31 @@
+.menu
+  h3
+    text-align: center
+    font-size: 30px
+    font-weight: bold
+  &-wrapper
+    display: flex
+  &-left
+    width: 40%
+    &__submenu
+      list-style-type: none
+      background: #c3c3bc
+      width: 300px
+      padding-left: 0
+      li
+        text-align: center
+        position: relative
+        width: 100%
+        &:before
+          content: ''
+          position: absolute
+          width: 30px
+          height: 2px
+          background: #fff
+          left: calc(50% - 12px)
+          bottom: 0
+        a
+          color: #fff
+          
+  &-right
+    width: 60%

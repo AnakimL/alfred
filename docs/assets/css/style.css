@@ -8888,6 +8888,10 @@ mark,
     color: #6c757d;
 }
 
+#mapBig {
+    display: none;
+}
+
 .header {
     font-family: 'Anonymous Pro', monospace;
     display: -webkit-box;
@@ -8910,6 +8914,8 @@ mark,
 
 .header--mobile {
     padding: 3px 0;
+    background: none;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .header--mobile nav ul {
@@ -9167,6 +9173,7 @@ mark,
     display: flex;
     max-width: 1300px;
     margin: 30px auto 0;
+    width: 100%;
 }
 
 .pageOne__offer {
@@ -9402,6 +9409,10 @@ mark,
 }
 
 @media screen and (max-width: 1200px) {
+    .lap-hide {
+        display: block;
+    }
+
     .pg-wrapper.pg-vertical {
         width: 100% !important;
     }
@@ -9472,6 +9483,10 @@ mark,
 }
 
 @media screen and (max-width: 900px) {
+    .pageThree-text {
+        font-size: 16px;
+    }
+
     .pageOne__top {
         width: 100%;
         max-width: 100%;
@@ -9507,6 +9522,10 @@ mark,
         margin: 0 auto;
     }
 
+    .pageOne .slick-slide img {
+        margin: 0 auto;
+    }
+
     .pageFour__info {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -9525,6 +9544,18 @@ mark,
 }
 
 @media screen and (max-width: 600px) {
+    .pageFooter-slider {
+        display: none !important;
+    }
+
+    #map {
+        display: none;
+    }
+
+    #mapBig {
+        display: block;
+    }
+
     .header__adr {
         display: none;
     }
@@ -9651,4 +9682,51 @@ mark,
 
 .pageOne .slick-slide div {
     height: 100%;
+}
+
+.menu h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.menu-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.menu-left {
+    width: 40%;
+}
+
+.menu-left__submenu {
+    list-style-type: none;
+    background: #c3c3bc;
+    width: 300px;
+    padding-left: 0;
+}
+
+.menu-left__submenu li {
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.menu-left__submenu li:before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    left: calc(50% - 12px);
+    bottom: 0;
+}
+
+.menu-left__submenu li a {
+    color: #fff;
+}
+
+.menu-right {
+    width: 60%;
 }

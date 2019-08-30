@@ -7,12 +7,16 @@ $(document).ready(function () {
     $(window).resize(function() {
         if ($(window).width() < 1201) {
             $('.header').addClass('header--mobile');
+
         }
         else if ($(window).width() > 1201) {
             $('.header').removeClass('header--mobile');
+            // $('.lap-hide').attr('data-anchor', 'Page 5').addClass('pg-page');
         };
 
     });
+
+
 
 
 
@@ -24,12 +28,17 @@ $(document).ready(function () {
         slidesToShow: 1
     });
 
+    $('.pageFooter-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4
+    });
+
     $('.pageOne__offer-slider').slick({
         arrows: false,
         dots: true,
-        infinite: true,
         slidesToScroll: 1,
-        variableWidth: true,
         mobileFirst: true,
         responsive: [{
             breakpoint: 992,
