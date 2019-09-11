@@ -1,5 +1,45 @@
 
+(function($){
+    $(function(){
+
+        jQuery.fn.lightTabs = function(options){
+
+            var createTabs = function(){
+                tabs = this;
+                i = 0;
+
+                showPage = function(i){
+                    $(tabs).find('.menu-right__submenu').children("div").hide();
+                    $(tabs).find('.menu-right__submenu').children("div").eq(i).show();
+                    $(tabs).find("ul.menu-left__submenu").children("li").removeClass("active");
+                    $(tabs).find("ul.menu-left__submenu").children("li").eq(i).addClass("active");
+                }
+
+                showPage(0);
+
+                $(tabs).find("ul.menu-left__submenu").children("li").each(function(index, element){
+                    $(element).attr("data-page", i);
+                    i++;
+                });
+
+                $(tabs).find("ul.menu-left__submenu").children("li").click(function(){
+                    showPage(parseInt($(this).attr("data-page")));
+                });
+            };
+            return this.each(createTabs);
+        };
+
+    });
+})(jQuery);
 $(document).ready(function () {
+
+
+
+
+
+
+
+
     if ($(window).width() < 1201) {
         $('.header').addClass('header--mobile');
     }
@@ -58,7 +98,9 @@ $(document).ready(function () {
     });
 
 
-
+    if($(".menu-wrapper").length > 0){
+        $(".menu-wrapper").lightTabs();
+    }
 
 
 });
@@ -121,3 +163,4 @@ new Pageable("#container1", {
         // do something when scrolling ends
     },
 });
+
